@@ -3,6 +3,7 @@ import os
 from fastapi import UploadFile
 
 UPLOAD_DIR = 'uploads'
+
 def save_file(file: UploadFile) -> tuple[str, str]:
     file_id = str(uuid.uuid4())
     extension = file.filename.split('.')[-1]
